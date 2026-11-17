@@ -124,6 +124,130 @@ text-align:center;
 .email{
 color:#38bdf8;
 }
+/* =================================
+   PREMIUM ANIMATION UPGRADE
+   BISWAJIT PARIDA PORTFOLIO
+================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HERO ANIMATION */
+
+.hero {
+  background-attachment: scroll;
+  animation: heroReveal 1.2s ease both;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-content {
+  animation: cinematicEnter 1.2s cubic-bezier(.2,.7,.2,1) both;
+}
+
+@keyframes cinematicEnter {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(45px) scale(.98);
+  filter: blur(3px);
+
+  transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.2,.7,.2,1),
+    filter .9s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* PREMIUM CARD HOVER */
+
+.card,
+.project,
+.why-card {
+  transition:
+    transform .45s cubic-bezier(.2,.7,.2,1),
+    border-color .4s ease,
+    box-shadow .4s ease;
+}
+
+.card:hover,
+.project:hover,
+.why-card:hover {
+  transform: translateY(-9px);
+  border-color: var(--gold);
+  box-shadow: 0 18px 45px rgba(0,0,0,.3);
+}
+
+/* IMAGE ZOOM */
+
+.project-image img {
+  transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.project:hover .project-image img {
+  transform: scale(1.08);
+}
+
+/* BUTTON ANIMATION */
+
+.btn {
+  transition: all .35s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(198,165,106,.16);
+}
+
+/* NAVIGATION */
+
+.nav-links a {
+  transition: color .3s ease;
+}
+
+/* ACCESSIBILITY */
+
+@media(prefers-reduced-motion:reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
 </style>
 </head>
 
