@@ -46,3 +46,16 @@ https://paridadev.github.io/realestate.html
 ### AI Fitness Website
 Live Demo:
 https://paridadev.github.io/gym.html
+## Featured Project
+
+### Luxury Restaurant Website
+
+Features:
+- Premium Dark Theme
+- Food Gallery
+- Reservation Popup
+- Scroll Animations
+- Responsive Design
+
+Live Demo:
+https://paridadev.github.io/restaurant.html
