@@ -35,3 +35,8 @@ Property listing website with lead generation form.
 
 ### AI Fitness Website
 Gym and fitness website with membership inquiry system.
+## Projects
+
+### AI Restaurant Website
+Live Demo:
+https://paridadev.github.io/restaurant.html
