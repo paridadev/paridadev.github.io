@@ -25,3 +25,13 @@ I build modern AI-powered websites, chatbots, and business automation solutions.
 
 GitHub:
 https://github.com/paridadev
+## Projects
+
+### AI Restaurant Website
+Modern restaurant website with online booking and AI chatbot.
+
+### AI Real Estate Website
+Property listing website with lead generation form.
+
+### AI Fitness Website
+Gym and fitness website with membership inquiry system.
