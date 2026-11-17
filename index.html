@@ -1125,5 +1125,81 @@ footer {
   <div class="about-layout">
 
     <div class="about-visual reveal">
-      <img
-        src="https://images.unsplash.com/photo-1497366811353
+<img  
+src="https://images.unsplash.com/photo-1497366811353?auto=format&fit=crop&w=1000&q=85"  
+alt="Creative workspace"  
+loading="lazy">
+<div class="about-tag">Ideas into Reality ↗</div>
+    </div>
+    <div class="about-text reveal">
+      <span class="eyebrow">ABOUT ME</span>
+      <h2>Turning ideas into <span>digital experiences.</span></h2>
+      <p>I create modern websites that help businesses build a strong online presence and connect with more customers.</p>
+      <a href="#contact" class="btn btn-primary">Let's Work Together ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <div class="container">
+    <span class="eyebrow">WHY WORK WITH ME</span>
+    <h2>More than just <span>a website.</span></h2>
+    <p>Creative design, smooth experience and a focus on your business goals.</p>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <span class="eyebrow">HAVE A PROJECT?</span>
+    <h2>Let's create something <span>great.</span></h2>
+    <a class="btn btn-primary" href="mailto:biswajitparida987@gmail.com">Contact Me ↗</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Biswajit Parida. All rights reserved.</p>
+</footer>
+
+<a href="#" class="back-top" aria-label="Back to top">↑</a>
+
+<script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+    if (loader) loader.classList.add("hide");
+  });
+
+  setTimeout(function () {
+    const loader = document.getElementById("loader");
+    if (loader) loader.classList.add("hide");
+  }, 3000);
+
+  const menu = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-links");
+
+  if (menu && nav) {
+    menu.addEventListener("click", function () {
+      nav.classList.toggle("active");
+    });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (nav) nav.classList.remove("active");
+    });
+  });
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(".reveal").forEach(function (element) {
+    observer.observe(element);
+  });
+</script>
+</body>
+</html>
