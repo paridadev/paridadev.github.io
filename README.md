@@ -43,3 +43,6 @@ https://paridadev.github.io/restaurant.html
 ### AI Real Estate Website
 Live Demo:
 https://paridadev.github.io/realestate.html
+### AI Fitness Website
+Live Demo:
+https://paridadev.github.io/gym.html
