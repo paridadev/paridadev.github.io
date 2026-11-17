@@ -40,3 +40,6 @@ Gym and fitness website with membership inquiry system.
 ### AI Restaurant Website
 Live Demo:
 https://paridadev.github.io/restaurant.html
+### AI Real Estate Website
+Live Demo:
+https://paridadev.github.io/realestate.html
