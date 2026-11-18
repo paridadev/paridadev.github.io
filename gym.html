@@ -1,29 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Fitness Gym</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="IRON HOUSE — premium fitness club. Strength training, personal coaching, group classes and more.">
+<title>IRON HOUSE | Train Beyond Limits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090a09;--surface:#121411;--surface2:#1b1e18;--lime:#d7ff3f;--text:#f4f5ed;--muted:#a6aa9d;--line:rgba(255,255,255,.13);--head:'Barlow Condensed',Impact,sans-serif;--body:'DM Sans',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden}a{color:inherit;text-decoration:none}button,input{font:inherit}img{display:block;width:100%;object-fit:cover}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+h1,h2,h3,.display{font-family:var(--head);text-transform:uppercase;line-height:.91;letter-spacing:-.4px}h1{font-size:clamp(68px,10vw,138px)}h2{font-size:clamp(48px,7vw,88px)}h3{font-size:32px}.lime{color:var(--lime)}.muted{color:var(--muted)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--lime);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase}.eyebrow:before{content:"";width:24px;height:1px;background:currentColor}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:16px 22px;background:var(--lime);border:1px solid var(--lime);color:#11140a;font-size:11px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;cursor:pointer;transition:.25s}.btn:hover{background:transparent;color:var(--lime);transform:translateY(-3px)}.btn.ghost{background:transparent;border-color:var(--line);color:var(--text)}.btn.ghost:hover{border-color:var(--lime);color:var(--lime)}
+/* NAV */
+.nav{position:absolute;z-index:30;top:0;left:0;width:100%;border-bottom:1px solid var(--line);background:rgba(8,9,8,.34);backdrop-filter:blur(12px)}.navin{height:82px;display:flex;align-items:center;justify-content:space-between}.logo{font:900 32px var(--head);letter-spacing:1px}.logo b{color:var(--lime)}.links{display:flex;align-items:center;gap:27px}.links a{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#ddd}.links a:hover{color:var(--lime)}.navright{display:flex;gap:10px;align-items:center}.login-btn{background:transparent;border:1px solid var(--line);color:white;padding:12px 15px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;cursor:pointer}.login-btn:hover{border-color:var(--lime);color:var(--lime)}.hamb{display:none;background:none;border:0;color:white;font-size:27px}
+/* HERO */
+.hero{height:min(940px,100svh);min-height:740px;position:relative;display:flex;align-items:center;overflow:hidden;background:#111}.hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,7,5,.96),rgba(5,7,5,.78) 43%,rgba(5,7,5,.15)),linear-gradient(0deg,var(--bg),transparent 34%),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2200&q=90') center 45%/cover}.hero-content{position:relative;z-index:2;padding-top:75px}.hero h1{margin:25px 0 22px;max-width:850px}.hero p{max-width:470px;color:#c6c9bf;font-size:14px;line-height:1.9;margin-bottom:30px}.actions{display:flex;gap:12px;flex-wrap:wrap}.hero-stamp{position:absolute;right:9%;top:28%;width:180px;height:180px;border:1px solid rgba(215,255,63,.45);border-radius:50%;display:grid;place-items:center;transform:rotate(-13deg);color:var(--lime);font:700 15px var(--head);letter-spacing:3px;text-align:center;animation:orbit 18s linear infinite}.hero-stamp:before{content:"";position:absolute;inset:12px;border:1px dashed rgba(215,255,63,.5);border-radius:50%}@keyframes orbit{to{transform:rotate(347deg)}}.hero-bottom{position:absolute;bottom:30px;left:0;right:0;display:flex;justify-content:space-between;color:#b3b7ac;font-size:9px;letter-spacing:2px;text-transform:uppercase}
+/* ticker */
+.ticker{overflow:hidden;background:var(--lime);color:#10120b;padding:13px 0}.ticker-track{display:flex;gap:30px;width:max-content;white-space:nowrap;animation:marquee 30s linear infinite;font:800 24px var(--head);letter-spacing:1px;text-transform:uppercase}.ticker-track span:after{content:"✳";margin-left:30px}@keyframes marquee{to{transform:translateX(-50%)}}
+/* common sections */
+section{padding:105px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:45px}.section-head p{max-width:400px;color:var(--muted);font-size:13px;line-height:1.9}
+/* intro */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.intro-img{height:570px;position:relative;overflow:visible}.intro-img img{height:100%;filter:saturate(.72);transition:.6s}.intro-img:hover img{filter:saturate(1)}.photo-chip{position:absolute;right:-18px;bottom:28px;background:var(--lime);color:#111;padding:18px 22px;font:800 22px var(--head);text-transform:uppercase}.intro-copy h2{margin:22px 0}.intro-copy p{color:var(--muted);font-size:13px;line-height:2;margin-bottom:23px}.ticklist{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0 32px}.ticklist span{font-size:11px;font-weight:700}.ticklist span:before{content:"↗";color:var(--lime);margin-right:9px}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line)}.stat{padding:30px 22px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;color:var(--lime);font:700 55px var(--head)}.stat span{color:var(--muted);font-size:9px;letter-spacing:1.6px;text-transform:uppercase}
+/* services */
+.dark-section{background:#10120f}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{min-height:270px;padding:27px;background:var(--surface);border:1px solid var(--line);position:relative;overflow:hidden;transition:.35s;transform-style:preserve-3d}.service:hover{border-color:rgba(215,255,63,.6);background:#191d13;box-shadow:0 20px 50px rgba(0,0,0,.25)}.service .num{color:var(--lime);font:700 13px var(--head);letter-spacing:2px}.service .symbol{font-size:30px;margin:26px 0 18px;display:block}.service h3{font-size:29px;margin-bottom:10px}.service p{color:var(--muted);font-size:11px;line-height:1.8;max-width:290px}.service:after{content:"↗";position:absolute;right:24px;bottom:20px;color:var(--lime);font-size:22px}
+/* transformation gallery */
+.transform-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.transform-card{background:var(--surface);padding:12px}.transform-pair{display:grid;grid-template-columns:1fr 1fr;gap:5px;position:relative}.transform-pair img{height:300px;filter:saturate(.8)}.transform-pair span{position:absolute;bottom:12px;background:rgba(0,0,0,.78);padding:8px 11px;font-size:9px;letter-spacing:1px;text-transform:uppercase}.transform-pair span:first-of-type{left:12px}.transform-pair span:last-of-type{right:12px}.transform-caption{padding:18px 8px 10px;display:flex;justify-content:space-between;gap:12px}.transform-caption h3{font-size:26px}.transform-caption p{color:var(--muted);font-size:10px;line-height:1.6;max-width:200px;text-align:right}.disclaimer{color:var(--muted);font-size:10px;line-height:1.7;margin-top:18px}
+/* 3d feature */
+.three-d{background:radial-gradient(ellipse at 75% 50%,#263018 0%,#11150e 35%,#090a09 75%);overflow:hidden}.three-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px}.three-copy h2{margin:20px 0}.three-copy p{max-width:450px;color:var(--muted);font-size:13px;line-height:1.9;margin-bottom:25px}.stage{height:420px;display:grid;place-items:center;perspective:900px}.cube{width:210px;height:210px;position:relative;transform-style:preserve-3d;animation:spin 14s linear infinite}.cube-face{position:absolute;inset:0;border:2px solid var(--lime);background:linear-gradient(135deg,rgba(215,255,63,.23),rgba(215,255,63,.025));box-shadow:inset 0 0 35px rgba(215,255,63,.12),0 0 35px rgba(215,255,63,.08);display:grid;place-items:center;color:var(--lime);font:900 38px var(--head);backface-visibility:visible}.front{transform:translateZ(105px)}.back{transform:rotateY(180deg) translateZ(105px)}.right{transform:rotateY(90deg) translateZ(105px)}.left{transform:rotateY(-90deg) translateZ(105px)}.top{transform:rotateX(90deg) translateZ(105px)}.bottom{transform:rotateX(-90deg) translateZ(105px)}@keyframes spin{from{transform:rotateX(-20deg) rotateY(0)}to{transform:rotateX(340deg) rotateY(360deg)}}
+/* coaches */
+.coach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.coach{background:var(--surface);padding:11px}.coach img{height:350px;filter:grayscale(75%);transition:.5s}.coach:hover img{filter:grayscale(0)}.coach-meta{display:flex;justify-content:space-between;align-items:end;padding:17px 8px 10px}.coach-meta h3{font-size:28px}.coach-meta span{color:var(--lime);font-size:9px;letter-spacing:1px;text-transform:uppercase;text-align:right}
+/* pricing */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.price-card{background:var(--surface);padding:30px 26px;border:1px solid var(--line);position:relative}.price-card.featured{border-color:var(--lime);background:#1a1e13;transform:translateY(-9px)}.popular{position:absolute;right:0;top:0;background:var(--lime);color:#10120b;padding:9px 12px;font-size:8px;font-weight:900;letter-spacing:1px}.price-card h3{font-size:29px}.price-card>p{color:var(--muted);font-size:11px;line-height:1.7;margin-top:9px;min-height:38px}.price{font:700 55px var(--head);margin:22px 0}.price small{font:11px var(--body);color:var(--muted)}.price-card ul{list-style:none;border-top:1px solid var(--line);padding-top:18px;margin-bottom:25px}.price-card li{font-size:11px;color:#d2d5cb;margin:13px 0}.price-card li:before{content:"＋";color:var(--lime);margin-right:9px}.price-card .btn{width:100%}
+/* location */
+.location{background:#10120f}.location-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:35px;align-items:stretch}.location-copy h2{margin:20px 0}.location-copy p{color:var(--muted);font-size:12px;line-height:1.9;margin-bottom:18px}.location-line{padding:15px 0;border-top:1px solid var(--line);font-size:11px;color:#dfe2d8}.location-line b{display:block;color:var(--lime);font-size:9px;letter-spacing:1.5px;margin-bottom:6px}.map-frame{min-height:380px;background:#20241b;border:1px solid var(--line)}.map-frame iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(1) invert(.88) contrast(.85)}
+/* contact footer */
+.contact{background:var(--lime);color:#111;padding:78px 0}.contact .eyebrow{color:#111}.contact .eyebrow:before{background:#111}.contact-row{display:flex;justify-content:space-between;align-items:center;gap:25px}.contact h2{margin-top:18px}.contact .btn{background:#111;color:var(--lime);border-color:#111}.contact .btn:hover{background:transparent;color:#111}
+footer{padding:32px 0;background:#070807}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}footer p,footer a{font-size:10px;color:var(--muted)}.social{display:flex;gap:18px}
+/* login modal */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.78);backdrop-filter:blur(10px);display:none;place-items:center;padding:20px}.modal.show{display:grid}.modal-box{width:min(440px,100%);background:#151812;border:1px solid rgba(215,255,63,.4);padding:30px;position:relative;box-shadow:0 25px 90px #000}.modal-close{position:absolute;right:17px;top:12px;background:none;border:0;color:white;font-size:25px;cursor:pointer}.modal-box h2{font-size:42px;margin:15px 0}.modal-box p{font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:18px}.field{display:block;margin:14px 0}.field span{display:block;font-size:9px;color:var(--lime);letter-spacing:1.3px;text-transform:uppercase;margin-bottom:7px}.field input{width:100%;padding:13px;background:#090b08;border:1px solid var(--line);color:white;outline:none}.field input:focus{border-color:var(--lime)}.modal-box .btn{width:100%;margin-top:7px}.form-note{font-size:9px!important;margin-top:13px!important}
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:translateY(0)}.delay1{transition-delay:.12s}.delay2{transition-delay:.24s}
+@media(max-width:900px){.links{display:none;position:absolute;top:82px;left:0;width:100%;padding:22px 25px;background:#10120f;flex-direction:column;align-items:flex-start}.links.open{display:flex}.hamb{display:block}.navright>.btn{display:none}.intro{grid-template-columns:1fr;gap:45px}.intro-img{height:450px}.three-grid{grid-template-columns:1fr}.stage{height:340px}.location-grid{grid-template-columns:1fr}.map-frame{min-height:330px}.map-frame iframe{min-height:330px}}
+@media(max-width:650px){.wrap{width:calc(100% - 34px)}section{padding:75px 0}.hero{min-height:700px}.hero h1{font-size:70px}.hero-stamp{width:115px;height:115px;right:7%;top:21%;font-size:10px}.hero-bottom{font-size:8px}.section-head{align-items:flex-start;flex-direction:column}.stats{grid-template-columns:1fr 1fr}.stat{padding:22px 13px}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.stat strong{font-size:43px}.service-grid{grid-template-columns:1fr 1fr}.service{padding:20px;min-height:245px}.service h3{font-size:24px}.transform-grid{grid-template-columns:1fr}.transform-pair img{height:230px}.coach-grid,.price-grid{grid-template-columns:1fr}.price-card.featured{transform:none}.coach img{height:390px}.contact-row,.footer-row{align-items:flex-start;flex-direction:column}.ticklist{grid-template-columns:1fr}.stage{height:290px}.cube{transform:scale(.78)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
+<nav class="nav"><div class="wrap navin">
+<a class="logo" href="#home">IRON<b>HOUSE.</b></a>
+<div class="links" id="navLinks"><a href="#about">About</a><a href="#services">Services</a><a href="#transform">Transformations</a><a href="#coaches">Coaches</a><a href="#membership">Membership</a><a href="#location">Location</a></div>
+<div class="navright"><button class="login-btn" data-open-login>Member Login ↗</button><a class="btn" href="#membership">Join now</a><button class="hamb" id="hamb" aria-label="Open menu">☰</button></div>
+</div></nav>
+<header class="hero" id="home"><div class="hero-bg"></div><div class="wrap hero-content">
+<span class="eyebrow">Train with purpose. Live with power.</span>
+<h1>BUILT BY<br><span class="lime">DISCIPLINE.</span></h1>
+<p>Not just another workout space. A place to build strength, confidence and a mindset that carries beyond the gym floor.</p>
+<div class="actions"><a class="btn" href="#membership">Explore membership ↗</a><a class="btn ghost" href="#services">Discover our services</a></div>
+</div><div class="hero-stamp">STRENGTH<br>•<br>COMMUNITY<br>•<br>RESULTS</div><div class="wrap hero-bottom"><span>01 / IRON HOUSE FITNESS CLUB</span><span>Scroll to explore ↓</span></div></header>
+<div class="ticker"><div class="ticker-track"><span>Show up</span><span>Put in the work</span><span>Get stronger</span><span>Stay consistent</span><span>Show up</span><span>Put in the work</span><span>Get stronger</span><span>Stay consistent</span></div></div>
+<main>
+<section id="about"><div class="wrap intro">
+<div class="intro-img reveal"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1100&q=85" alt="Real gym interior with strength equipment" loading="lazy"><div class="photo-chip">Your work. Your results.</div></div>
+<div class="intro-copy reveal delay1"><span class="eyebrow">Welcome to Iron House</span><h2>MORE THAN<br>A <span class="lime">WORKOUT.</span></h2><p>Whether you are starting from zero or working toward a new personal best, our training environment is designed to help you move with confidence. Train independently, join a class or work one-to-one with a coach.</p><div class="ticklist"><span>Supportive community</span><span>Modern equipment</span><span>Qualified coaching</span><span>Flexible memberships</span></div><a class="btn" href="#location">Visit the club ↗</a></div>
+</div></section>
+<div class="wrap stats reveal"><div class="stat"><strong>12+</strong><span>Training zones</span></div><div class="stat"><strong>7</strong><span>Days a week</span></div><div class="stat"><strong>1:1</strong><span>Coaching options</span></div><div class="stat"><strong>ALL</strong><span>Fitness levels</span></div></div>
 
-<h1>Power Fitness Gym</h1>
+<section class="dark-section" id="services"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Everything you need</span><h2 style="margin-top:20px">TRAINING FOR<br><span class="lime">EVERY GOAL.</span></h2></div><p>From your first gym session to structured performance training, explore the services available at Iron House. Final availability can be customised for the real club.</p></div>
+<div class="service-grid">
+<article class="service reveal"><span class="num">01 / STRENGTH</span><span class="symbol">🏋</span><h3>Strength & Weights</h3><p>Free weights, resistance machines and progressive strength sessions.</p></article>
+<article class="service reveal delay1"><span class="num">02 / CARDIO</span><span class="symbol">🏃</span><h3>Cardio Zone</h3><p>Treadmills, cycles and conditioning equipment for endurance and heart health.</p></article>
+<article class="service reveal delay2"><span class="num">03 / COACHING</span><span class="symbol">◎</span><h3>Personal Training</h3><p>One-to-one sessions with a coach and a plan built around your goals.</p></article>
+<article class="service reveal"><span class="num">04 / GROUP</span><span class="symbol">⚡</span><h3>Group Classes</h3><p>Instructor-led sessions that bring energy, structure and community.</p></article>
+<article class="service reveal delay1"><span class="num">05 / HIIT</span><span class="symbol">◈</span><h3>HIIT & Conditioning</h3><p>Time-efficient interval training to challenge stamina and work capacity.</p></article>
+<article class="service reveal delay2"><span class="num">06 / MOBILITY</span><span class="symbol">✳</span><h3>Yoga & Mobility</h3><p>Movement, flexibility and recovery sessions to complement your training.</p></article>
+<article class="service reveal"><span class="num">07 / GOAL SETTING</span><span class="symbol">↗</span><h3>Body Transformation</h3><p>Goal reviews, workout structure and progress tracking to keep you consistent.</p></article>
+<article class="service reveal delay1"><span class="num">08 / NUTRITION</span><span class="symbol">◉</span><h3>Nutrition Guidance</h3><p>General nutrition guidance and habit support to complement your workouts.</p></article>
+<article class="service reveal delay2"><span class="num">09 / RECOVERY</span><span class="symbol">✦</span><h3>Recovery & Wellness</h3><p>Stretching, cool-down routines and recovery guidance after training.</p></article>
+</div></div></section>
 
-<h2>Transform Your Body</h2>
+<section id="transform"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Progress is personal</span><h2 style="margin-top:20px">EVERY JOURNEY<br>STARTS <span class="lime">SOMEWHERE.</span></h2></div><p>Real progress comes from consistency, coaching and time. Use this gallery area for verified member transformation photos—with written permission—when the gym supplies them.</p></div>
+<div class="transform-grid">
+<article class="transform-card reveal"><div class="transform-pair"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=700&q=85" alt="Athlete training in gym — progress story visual one" loading="lazy"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=85" alt="Athlete training in gym — progress story visual two" loading="lazy"><span>Training day</span><span>Keep progressing</span></div><div class="transform-caption"><h3>THE CONSISTENCY<br>PROJECT</h3><p>Member story placeholder<br>Replace with verified photos</p></div></article>
+<article class="transform-card reveal delay1"><div class="transform-pair"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=700&q=85" alt="Personal training session visual one" loading="lazy"><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=700&q=85" alt="Strength training session visual two" loading="lazy"><span>First session</span><span>Stronger habits</span></div><div class="transform-caption"><h3>BUILT ONE<br>SESSION AT A TIME</h3><p>Member story placeholder<br>Replace with verified photos</p></div></article>
+</div><p class="disclaimer">Photo note: these are authentic fitness stock photographs, not before-and-after evidence or actual member results. Do not present them as a real person's transformation. Replace with member-approved before/after images and accurate details before launch.</p>
+</div></section>
 
-<p>Professional fitness training and membership plans.</p>
+<section class="three-d"><div class="wrap three-grid"><div class="three-copy reveal"><span class="eyebrow">Train beyond limits</span><h2>MOVE WITH<br><span class="lime">PURPOSE.</span></h2><p>Build your routine around smart training, focused coaching and steady progress. The best transformation is the one you can sustain.</p><a class="btn" href="#membership">Find your plan ↗</a></div><div class="stage reveal delay1" aria-label="Animated 3D Iron House cube"><div class="cube"><div class="cube-face front">IRON</div><div class="cube-face back">HOUSE</div><div class="cube-face right">MOVE</div><div class="cube-face left">LIFT</div><div class="cube-face top">FOCUS</div><div class="cube-face bottom">REPEAT</div></div></div></div></section>
 
-<h3>Services</h3>
-<ul>
-<li>Personal Training</li>
-<li>Weight Loss Program</li>
-<li>Muscle Building</li>
-<li>Diet Guidance</li>
-</ul>
+<section id="coaches"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Guidance that moves you forward</span><h2 style="margin-top:20px">MEET THE<br><span class="lime">COACHING TEAM.</span></h2></div><p>Meet the people who can help you train with better form, structure and confidence. Replace these sample profiles with your actual coaches.</p></div>
+<div class="coach-grid">
+<article class="coach reveal"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=800&q=85" alt="Fitness trainer portrait" loading="lazy"><div class="coach-meta"><h3>ADAM<br>REED</h3><span>Strength coach</span></div></article>
+<article class="coach reveal delay1"><img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=800&q=85" alt="Female fitness trainer portrait" loading="lazy"><div class="coach-meta"><h3>MAYA<br>JAMES</h3><span>Fitness coach</span></div></article>
+<article class="coach reveal delay2"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=85" alt="Personal training coach" loading="lazy"><div class="coach-meta"><h3>JAY<br>PARKER</h3><span>Performance coach</span></div></article>
+</div></div></section>
 
-<h3>Membership</h3>
-<p>Monthly and yearly membership plans available.</p>
+<section class="dark-section" id="membership"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Choose your commitment</span><h2 style="margin-top:20px">YOUR PLAN.<br><span class="lime">YOUR PACE.</span></h2></div><p>Demo membership prices for this portfolio website. Confirm actual rates, taxes, access rules and inclusions with the gym before publishing.</p></div>
+<div class="price-grid">
+<article class="price-card reveal"><h3>STARTER</h3><p>Build your routine and get comfortable on the gym floor.</p><div class="price">₹1,499<small> / month</small></div><ul><li>Gym floor access</li><li>Equipment orientation</li><li>Locker access</li><li>Basic fitness assessment</li></ul><a class="btn ghost" href="#contact">Enquire now ↗</a></article>
+<article class="price-card featured reveal delay1"><span class="popular">MEMBER FAVOURITE</span><h3>UNLIMITED</h3><p>More flexibility for members who love to train.</p><div class="price">₹2,499<small> / month</small></div><ul><li>All Starter benefits</li><li>Group class access</li><li>Monthly progress review</li><li>Guest pass</li></ul><a class="btn" href="#contact">Enquire now ↗</a></article>
+<article class="price-card reveal delay2"><h3>ELITE</h3><p>Extra structure and personal coaching support.</p><div class="price">₹4,999<small> / month</small></div><ul><li>All Unlimited benefits</li><li>Personal training sessions</li><li>Custom workout plan</li><li>Priority class booking</li></ul><a class="btn ghost" href="#contact">Enquire now ↗</a></article>
+</div></div></section>
 
-<h3>Contact</h3>
-<p>Email: biswajitparida987@gmail.com</p>
+<section class="location" id="location"><div class="wrap location-grid"><div class="location-copy reveal"><span class="eyebrow">Come train with us</span><h2>FIND YOUR<br><span class="lime">IRON HOUSE.</span></h2><p>Visit us, take a look around and talk to our team about the right membership for your goals.</p><div class="location-line"><b>ADDRESS</b>Replace with the gym's verified street address, Bengaluru, Karnataka</div><div class="location-line"><b>OPENING HOURS</b>Update with confirmed weekday and weekend timings</div><div class="location-line"><b>PHONE / WHATSAPP</b>Replace with the gym's official contact number</div><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=gyms+in+Bengaluru">Find gyms on Google Maps ↗</a></div><div class="map-frame reveal delay1"><iframe title="Map search for gyms in Bengaluru" loading="lazy" src="https://www.google.com/maps?q=gyms%20in%20Bengaluru&output=embed" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div></div></section>
 
+<section class="contact" id="contact"><div class="wrap contact-row"><div><span class="eyebrow">Your next chapter starts here</span><h2>READY TO GET<br> <span style="color:#fff">STRONGER?</span></h2></div><a class="btn" href="mailto:hello@ironhouse.example?subject=Membership%20Enquiry">Book a free gym tour ↗</a></div></section>
+</main>
+<footer><div class="wrap footer-row"><a class="logo" href="#home">IRON<b>HOUSE.</b></a><p>© <span id="year"></span> IRON HOUSE. Portfolio demo concept.</p><div class="social"><a href="#contact">Instagram</a><a href="#contact">Facebook</a><a href="#home">Back to top ↑</a></div></div></footer>
+
+<div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle"><div class="modal-box"><button class="modal-close" id="closeModal" aria-label="Close">×</button><span class="eyebrow">Member area</span><h2 id="loginTitle">WELCOME<br><span class="lime">BACK.</span></h2><p>Sign-in screen preview for the gym member portal.</p><form id="loginForm"><label class="field"><span>Email address</span><input type="email" placeholder="you@example.com" required></label><label class="field"><span>Password</span><input type="password" placeholder="Enter password" required minlength="6"></label><button class="btn" type="submit">Continue ↗</button></form><p class="form-note">Demo only: connect a secure authentication service and member database before using real accounts. This page does not store passwords or create accounts.</p></div></div>
+<script>
+const menu=document.getElementById('hamb'),links=document.getElementById('navLinks');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+const modal=document.getElementById('loginModal');
+document.querySelectorAll('[data-open-login]').forEach(b=>b.addEventListener('click',()=>modal.classList.add('show')));
+document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('show'));
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('show')});
+document.getElementById('loginForm').addEventListener('submit',e=>{e.preventDefault();alert('This is a front-end demo. Connect secure authentication before accepting member logins.');});
+const revealObserver=new IntersectionObserver((entries,obs)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+/* subtle pointer-driven 3D tilt on service cards */
+document.querySelectorAll('.service').forEach(card=>{
+ card.addEventListener('pointermove',e=>{if(matchMedia('(max-width: 900px)').matches)return;const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(700px) rotateX(${-y*5}deg) rotateY(${x*6}deg) translateY(-3px)`});
+ card.addEventListener('pointerleave',()=>card.style.transform='');
+});
+</script>
 </body>
 </html>
