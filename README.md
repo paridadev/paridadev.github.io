@@ -59,3 +59,19 @@ Features:
 
 Live Demo:
 https://paridadev.github.io/restaurant.html
+### AI Fitness Website
+
+Gym and fitness website with premium design and membership inquiry system.
+
+**Features:**
+- Premium Dark Theme
+- Realistic Fitness Photography
+- 3D Animations
+- Transformation Gallery
+- Member Login UI
+- Personal Training & Workout Programs
+- Membership Inquiry
+- Gym Location & Contact
+- Responsive Design
+
+**Live Demo:** https://paridadev.github.io/gym.html
