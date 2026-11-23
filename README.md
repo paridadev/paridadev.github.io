@@ -68,3 +68,20 @@ Gym and fitness website with premium design and membership inquiry system.
 - Responsive Design
 
 **Live Demo:** https://paridadev.github.io/gym.html
+
+## Luxury Real Estate Website
+
+Premium real estate website concept for Aurelia Estates, featuring elegant design and interactive property information.
+
+**Features:**
+
+- Premium luxury design
+- Cinematic video hero section
+- Responsive mobile-friendly layout
+- Interactive masterplan with selectable zones
+- Residence and amenity sections
+- Property gallery
+- Bengaluru location map
+- Enquiry form UI
+
+**Live Demo:** https://paridadev.github.io/realestate.html
