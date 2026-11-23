@@ -1201,5 +1201,83 @@ loading="lazy">
     observer.observe(element);
   });
 </script>
-</body>
+</body><style>
+.projects-section {
+  padding: 90px 7%;
+  background: #080d18;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+.projects-heading { text-align: center; margin-bottom: 45px; }
+.projects-heading h2 { font-size: clamp(30px, 5vw, 48px); margin: 0 0 12px; }
+.projects-heading p { color: #aab4c5; }
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1150px;
+  margin: auto;
+}
+.project-card {
+  background: #111b2c;
+  border: 1px solid #26354b;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: .3s ease;
+}
+.project-card:hover { transform: translateY(-8px); border-color: #66b8ff; }
+.project-card img { width: 100%; height: 210px; object-fit: cover; display: block; }
+.project-info { padding: 23px; }
+.project-info h3 { font-size: 22px; margin: 0 0 10px; }
+.project-info p { color: #b3bfd0; line-height: 1.6; min-height: 50px; }
+.project-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 20px;
+  border-radius: 7px;
+  background: #2589e8;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.project-link:hover { background: #1268ba; }
+</style>
+
+<section class="projects-section" id="projects">
+  <div class="projects-heading">
+    <h2>Selected Projects</h2>
+    <p>Modern websites designed to help businesses grow online.</p>
+  </div>
+
+  <div class="project-grid">
+
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85" alt="Restaurant website">
+      <div class="project-info">
+        <h3>Restaurant Website</h3>
+        <p>A modern restaurant website with elegant design and food presentation.</p>
+        <a class="project-link" href="https://paridadev.github.io/restaurant.html" target="_blank">View Live Demo ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85" alt="Gym website">
+      <div class="project-info">
+        <h3>Gym & Fitness Website</h3>
+        <p>A premium fitness website designed to attract members and build trust.</p>
+        <a class="project-link" href="https://paridadev.github.io/gym.html" target="_blank">View Live Demo ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Real estate website">
+      <div class="project-info">
+        <h3>Luxury Real Estate Website</h3>
+        <p>An elegant property showcase with modern layouts and premium visuals.</p>
+        <a class="project-link" href="https://paridadev.github.io/realestate.html" target="_blank">View Live Demo ↗</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 </html>
